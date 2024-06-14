@@ -25,7 +25,8 @@ export default function Footer() {
          {menuFooter.map((item, index) =>(
           <li key={index}>
             <a href={item.path} className="flex items-center gap-2 text-[12px]">
-
+              {item.icon}
+              <span>{item.name}</span>
             </a>
           </li>
          ))}
