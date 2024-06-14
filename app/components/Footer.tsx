@@ -20,17 +20,23 @@ export default function Footer() {
   ];
   return (
     <>
-      <footer className="flex items-center justify-center flex-col gap-5 p-5 bg-blue-700 text-white">
+      <footer className="flex items-center justify-center flex-col gap-5 p-5 bg-blue-700 text-white mt-20">
         <ul className="flex items-center justify-center gap-2">
-         {menuFooter.map((item, index) =>(
-          <li key={index}>
-            <a href={item.path} className="flex items-center gap-2 text-[12px]">
-              {item.icon}
-              <span>{item.name}</span>
-            </a>
-          </li>
-         ))}
+          {menuFooter.map((item, index) => (
+            <li key={index}>
+              <a
+                href={item.path}
+                className="flex items-center gap-2 text-[12px]"
+              >
+                {item.icon}
+                <span>{item.name}</span>
+              </a>
+            </li>
+          ))}
         </ul>
+        <p className="text-[11px]">
+          &copy; Baban Dev - Tous droits réservés - 2024{" "}
+        </p>
       </footer>
     </>
   );
