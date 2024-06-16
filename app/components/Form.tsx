@@ -56,6 +56,14 @@ const savePost = async () => {
 }
 
   return (
-    <div>Form</div>
+    <>
+    <div className="mt-4">
+    {showToast && (
+      <div className="absolute top-10 right-10">
+        <Toasts msg="Post créer avec succés" closeToast={() => setShowToast(false)}/>
+      </div>
+    )}
+    </div>
+    </>
   )
 }
