@@ -1,5 +1,6 @@
 "use client";
-import { set } from "firebase/database";
+import *  as Yup from "yup";
+import useClientAuth from "@/app/hooks/useClientAuth";
 import { useState, ChangeEvent } from "react";
 import { FaGoogle } from "react-icons/fa";
 
@@ -7,6 +8,11 @@ interface FormData {
   email: string;
   password: string;
 }
+
+const schema = Yup.object().shape({
+  email: Yup.string().email("Format email non valide").required("Champ requis"),
+  password: Yup.string().min(6).required("Champ requis"),
+})
 
 export default function SignInAndUpPage() {
 
