@@ -21,7 +21,7 @@ const Card: React.FC<CardProps> = ({ data }) => {
       className="bg-white p-4 rounded-md shadow-md cursor-pointer border hover:translate-x-[-10px] transition-all hover:border-blue-500"
     >
       <Image
-        className="w-full h[400px] rounded-md object-cover"
+        className="w-full h-[300px] rounded-md object-cover"
         src={data.image}
         width={400}
         height={300}

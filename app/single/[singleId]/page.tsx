@@ -15,6 +15,7 @@ export default function SinglePage({ params }: ArticleDetailsProps) {
   const router = useRouter();
   const [articleDetails, setArticleDetails] = useState<PostData | null>(null);
   const articlesData = useFirebaseData();
+
   useEffect(() => {
     if (params && params.singleId && articlesData.length > 0) {
       const article = articlesData.find(
@@ -32,7 +33,7 @@ export default function SinglePage({ params }: ArticleDetailsProps) {
 
   return (
     <>
-      <div className="w-full h-screen pt-20 mb-10">
+      <div className="flex-grow w-full pt-20 mb-20">
         <FaArrowLeft
           className="ml-10 text-[50px] cursor-pointer rounded-full p-2 bg-blue-500 text-white hover:scale-105 hover:translate-x-2 transition-all mb-5"
           onClick={() => router.back()}
